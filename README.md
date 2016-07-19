@@ -2,7 +2,7 @@
 - screen /dev/ttyUSB0 115200
 - Ctrl-A \
 
-### install esptoo.py
+### install esptool.py
 - pip2 install esptool
 
 ### erase flash completely
