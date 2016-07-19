@@ -1,3 +1,7 @@
+- [IDE](IDE.md)
+- [CLI](CLI-Debian.md)
+- [Micropython](Micropython.md)
+
 ### monitor serial
 - screen /dev/ttyUSB0 115200
 - Ctrl-a \
