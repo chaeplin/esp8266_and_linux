@@ -1,6 +1,6 @@
 ### monitor serial
 - screen /dev/ttyUSB0 115200
-- Ctrl-A \
+- Ctrl-a \
 
 ### install esptool.py
 - pip2 install esptool
