@@ -66,3 +66,7 @@ Control commands:
 For further help on a specific object, type help(obj)
 >>> 
 ```
+
+### more info
+- https://github.com/micropython/micropython/blob/master/esp8266/README.md
+
