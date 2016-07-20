@@ -1,18 +1,7 @@
 ### Using IDE
-- Verify/Compile
-```
-"/Users/userX/Library/Arduino15/packages/esp8266/tools/esptool/0.4.9/esptool" -eo "/Users/userX/Documents/Arduino/hardware/esp8266com/esp8266/bootloaders/eboot/eboot.elf" -bo "/var/folders/fl/fwwl5csx3w1520w0kz6kvh940000gq/T/build03e48dfea2dd66c248dfca5f0f1e8743.tmp/_67-WiFiManager.ino.bin" -bm dio -bf 40 -bz 4M -bs .text -bp 4096 -ec -eo "/var/folders/fl/fwwl5csx3w1520w0kz6kvh940000gq/T/build03e48dfea2dd66c248dfca5f0f1e8743.tmp/_67-WiFiManager.ino.elf" -bs .irom0.text -bs .text -bs .data -bs .rodata -bc -ec
-Using library ESP8266WiFi at version 1.0 in folder: /Users/userX/Documents/Arduino/hardware/esp8266com/esp8266/libraries/ESP8266WiFi 
-Using library DNSServer at version 1.1.0 in folder: /Users/userX/Documents/Arduino/hardware/esp8266com/esp8266/libraries/DNSServer 
-Using library ESP8266WebServer at version 1.0 in folder: /Users/userX/Documents/Arduino/hardware/esp8266com/esp8266/libraries/ESP8266WebServer 
-Using library WiFiManager at version 0.12 in folder: /Users/userX/Documents/Arduino/libraries/WiFiManager 
-Using library Ticker at version 1.0 in folder: /Users/userX/Documents/Arduino/hardware/esp8266com/esp8266/libraries/Ticker 
-
-Sketch uses 340,030 bytes (32%) of program storage space. Maximum is 1,044,464 bytes.
-Global variables use 37,084 bytes (45%) of dynamic memory, leaving 44,836 bytes for local variables. Maximum is 81,920 bytes.
-```
-- copy file after "-bo" to linux : /var/folders/fl/fwwl5csx3w1520w0kz6kvh940000gq/T/build03e48dfea2dd66c248dfca5f0f1e8743.tmp/_67-WiFiManager.ino.bin
-- scp /var/folders/fl/fwwl5csx3w1520w0kz6kvh940000gq/T/build03e48dfea2dd66c248dfca5f0f1e8743.tmp/_67-WiFiManager.ino.bin root@homesv
+- Sketch --> Export compiled Binary : binary will be in sketch foler
+- copy file _67-WiFiManager.ino.bin to server
+- scp _67-WiFiManager.ino.bin build@homesv:
 - upload : esptool.py -p /dev/ttyUSB0 --baud 115200 write_flash --flash_size=8m 0 _67-WiFiManager.ino.bin
 ```
 debian:~/build# esptool.py -p /dev/ttyUSB0 --baud 115200 write_flash --flash_size=8m 0 _67-WiFiManager.ino.bin 
