@@ -56,3 +56,4 @@ ESP_PWD ?= xxxx
 - make -f makeEspArduino.mk
 - make -f makeEspArduino.mk upload
 - make -f makeEspArduino.mk ota
+- make -f makeEspArduino.mk clean
